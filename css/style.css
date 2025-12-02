@@ -400,3 +400,43 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* ======================= */
+/* Fonts */
+/* ======================= */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* body text */
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', Arial, sans-serif; /* headings */
+  font-weight: 600; /* semi-bold for headings */
+}
+
+.hero h2 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 700; /* bold for hero title */
+}
+
+.btn {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 500;
+}
+
+h1.logo {
+  letter-spacing: 1px;
+}
+
+h2 {
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.nav-links li a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
