@@ -94,14 +94,23 @@ h1, h2, h3, p, li {
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem; /* large hero title */
+  letter-spacing: 1px;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem auto; /* center the paragraph */
 }
+
 
 /* Buttons */
 .btn {
@@ -440,3 +449,20 @@ p {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+
+.features .feature h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.features .feature p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
