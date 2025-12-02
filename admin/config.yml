@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: <your-username>/<repository-name>  # replace with your GitHub repo
+  branch: main  # branch to commit changes
+
+media_folder: "assets"      # folder for images and media
+public_folder: "assets"     # public path for images
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Homepage"
+        name: "homepage"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Description", name: "hero_description", widget: "text" }
+          - { label: "About Title", name: "about_title", widget: "string" }
+          - { label: "About Description", name: "about_description", widget: "text" }
