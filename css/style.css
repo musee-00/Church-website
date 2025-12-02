@@ -1,29 +1,52 @@
+/* ======================= */
 /* Basic Reset */
+/* ======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* ======================= */
+/* Body / Full-site Background */
+/* ======================= */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #222;
-  background: #f9f9f9;
+  color: white; /* readable text */
+  min-height: 100vh;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  /* Orange main color with black at bottom-left blending */
+  background: linear-gradient(to top right, black 0%, #FFA500 70%);
 }
 
+/* Subtle text shadow for readability */
+h1, h2, h3, p, li {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* ======================= */
 /* Navbar */
+/* ======================= */
+/* ======================= */
+/* Navbar */
+/* ======================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #4CAF50;
+  background: transparent; /* fully transparent */
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar .logo {
   color: #fff;
+  font-weight: bold;
 }
 
 .nav-links {
@@ -37,120 +60,16 @@ body {
   text-decoration: none;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 5rem 1rem;
-  background: #e0f7fa;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  background: #4CAF50;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* About Section */
-.about {
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.feature {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Responsive */
-@media(max-width: 768px){
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.contact {
-  padding: 4rem 1rem;
-  text-align: center;
-  background: #f0f0f0;
-}
-
-.contact-info {
-  list-style: none;
-  margin-top: 1rem;
-  padding: 0;
-}
-
-.contact-info li {
-  margin: 0.5rem 0;
-}
-
-.contact-info a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-/* Back to Top Button */
-#backToTop {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  display: none; /* Hidden by default */
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 0.8rem 1rem;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  z-index: 1000;
-}
 
-#backToTop:hover {
-  background-color: #45a049;
-}
-
-
-/* Hamburger Menu */
+/* ======================= */
+/* Hamburger Menu (Mobile) */
+/* ======================= */
 .hamburger {
-  display: none; /* hidden on desktop */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
@@ -164,29 +83,151 @@ footer {
   border-radius: 2px;
 }
 
-/* Responsive */
+/* ======================= */
+/* Hero Section */
+/* ======================= */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: transparent; /* transparent so gradient shows */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+/* ======================= */
+/* About / Features Section */
+/* ======================= */
+.about {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: transparent; /* transparent */
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  background: transparent; /* fully transparent */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* ======================= */
+/* Contact Section */
+/* ======================= */
+.contact {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: transparent;
+}
+
+.contact-info {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 0.5rem 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ======================= */
+/* Footer */
+/* ======================= */
+footer {
+  background: transparent; /* transparent so gradient shows */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ======================= */
+/* Back to Top Button */
+/* ======================= */
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: rgba(0,0,0,0.85);
+}
+
+/* ======================= */
+/* Responsive Styles */
+/* ======================= */
 @media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .nav-links {
     position: fixed;
     right: -100%;
     top: 0;
     height: 100vh;
     width: 200px;
-    background-color: #4CAF50;
+    background-color: rgba(0,0,0,0.85);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     transition: right 0.3s ease;
+    z-index: 99;
   }
 
   .nav-links li a {
-    color: white;
     font-size: 1.2rem;
   }
 
   .hamburger {
-    display: flex; /* show hamburger on mobile */
+    display: flex;
   }
 
   .nav-links.active {
