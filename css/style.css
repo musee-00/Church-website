@@ -100,3 +100,28 @@ footer {
     align-items: center;
   }
 }
+
+.contact {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.contact-info {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 0.5rem 0;
+}
+
+.contact-info a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
